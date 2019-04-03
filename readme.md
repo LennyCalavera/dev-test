@@ -4,6 +4,6 @@
 Использовал готовый образ docker "Laradock"
 
 Для запуска проекта в docker:
-docker-compose up -d nginx workspase (находясь в папке laradock)
+docker-compose up -d nginx (находясь в папке laradock)
 
 Результат работы: localhost/search (порт 80)
