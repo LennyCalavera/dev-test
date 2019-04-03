@@ -1,4 +1,4 @@
-version: '3'
+version: '3.1'
 
 networks:
   frontend:
@@ -323,6 +323,8 @@ services:
         - MYSQL_DATABASE=${MYSQL_DATABASE}
         - MYSQL_USER=${MYSQL_USER}
         - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+        - MYSQL_ALLOW_EMPTY_PASSWORD=1
+        - MYSQL_ALLOW_EMPTY_PASSWORD=1
         - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
         - TZ=${WORKSPACE_TIMEZONE}
       volumes:

@@ -339,8 +339,13 @@ class SearchController extends Controller
     {
         //$json = app('db')->select("SELECT json FROM airlines WHERE id=1");
         //$mas = json_decode($json[0]->{'json'}, TRUE);
-        $json = Airline::select('json')->get();
-        $mas = json_decode($json['0']['json'], TRUE);
+        
+        //$json = Airline::select('json')->get();
+        //$mas = json_decode($json['0']['json'], TRUE);
+
+        $json = file_get_contents(__DIR__."/airlines.json");
+        $mas = json_decode($json, TRUE);
+        
        foreach($mas as $key => $subarray) {
              $mas1[] = $subarray['name']['ru'];
          }

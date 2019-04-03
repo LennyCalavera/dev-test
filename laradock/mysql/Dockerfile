@@ -1,5 +1,5 @@
 ARG MYSQL_VERSION=latest
-FROM mysql:${MYSQL_VERSION}
+FROM mysql:5.7
 
 LABEL maintainer="Mahmoud Zalt <mahmoud@zalt.me>"
 
@@ -14,5 +14,6 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone &
 COPY my.cnf /etc/mysql/conf.d/my.cnf
 
 CMD ["mysqld"]
+
 
 EXPOSE 3306
